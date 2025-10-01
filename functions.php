@@ -1,4 +1,4 @@
-php<?php
+<?php
 
 // Enqueue CSS/JS
 add_action('wp_enqueue_scripts', function () {
