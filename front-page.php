@@ -3,21 +3,15 @@
 
 <main class="site-main homepage">
     <!-- Hero Section -->
-     <h3>This is the front-page.php</h3>
+    
     <section class="hero-section">
         <div class="container">
             <h1>Early Learning in the Heart of your community</h1>
             <p>At Sunshine Nest Daycare, we provide a nurturing and stimulating environment...</p>
             <a href="#" class="btn-primary">Schedule a Visit</a>
         </div>
-    </section>s
+    </section>
 
-
-
-<section class="section">
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
-</section>
 
 <section class="section">
     <h2 id="news-heading">Latest News</h2>
