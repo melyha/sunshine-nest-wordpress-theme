@@ -25,3 +25,19 @@ package-lock.json
 
 # WordPress specific (if needed)
 *.zip
+
+# WordPress core files
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup*/
+wp-content/upgrade/
+
+# Images (don't commit to Git)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.svg
+*.webp
