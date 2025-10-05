@@ -15,7 +15,14 @@
 <header class="site-header">
     <div class="container navbar">
         <a class="brand" href="<?php echo esc_url(home_url('/')); ?>">
-            <span class="logo">SN</span>
+            <?php 
+            // Custom Logo Support
+            if (function_exists('the_custom_logo') && has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                echo '<span class="logo">SN</span>';
+            }
+            ?>
             <span><?php bloginfo('name'); ?></span>
         </a>
         <button class="nav-toggle">☰</button>
