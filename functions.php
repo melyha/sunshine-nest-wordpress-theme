@@ -1,8 +1,5 @@
 <?php
-
-
 // Theme Setup
-
 function mytheme_setup() {
 // Enable Featured Images
 add_theme_support( 'post-thumbnails' );
@@ -30,7 +27,6 @@ function mytheme_scripts() {
     wp_enqueue_script('mytheme-main', get_template_directory_uri() . '/scripts/main.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'mytheme_scripts');
-
 
 
 // Customizer Settings 

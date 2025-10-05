@@ -717,6 +717,13 @@ main.container {
   height: 24px;
 }
 
+@media (max-width: 768px) {
+  .sub-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* ==========================================
    NEWS CARDS WITH CUSTOM WAVE
    ========================================== */

@@ -125,8 +125,8 @@ $recent = wp_get_recent_posts([
                             
                             
                         <div class="news-date">
-                            <span class="date-day"><?php echo get_the_date('j', $post['ID']); ?></span>
-                            <span class="date-month"><?php echo get_the_date('M', $post['ID']); ?></span>
+                            <span class="date-day"><?php echo esc_html(get_the_date('j', $post['ID'])); ?></span>
+                            <span class="date-month"><?php echo esc_html(get_the_date('M', $post['ID'])); ?></span>
                         </div>
                     </div>
                     
@@ -160,6 +160,6 @@ $recent = wp_get_recent_posts([
 </section>
 
 
-</section>
+
 </main>
 <?php get_footer(); ?>

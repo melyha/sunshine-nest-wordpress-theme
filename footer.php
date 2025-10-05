@@ -11,8 +11,8 @@
                 </div>
             </div>
             <div class="footer-contact">
-               <div><img src="<?php echo get_template_directory_uri(); ?>/assets/phone-icon.png" alt="" class="contact-icon"> 000-000-0000</div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/email-icon.png" alt="" class="contact-icon"> info@sunshinenestdaycare.com</div>
+               <div><img src="<?php echo get_template_directory_uri(); ?>/assets/phone-icon.png" alt=""> 000-000-0000</div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/email-icon.png" alt=""> info@sunshinenestdaycare.com</div>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
     </div>
 
      <div class="sub-footer">
-        <div class="container">
+         <div class="sub-footer-content">
             <small>© <?php echo date('Y'); ?> Sunshine Nest Daycare | <a href="#">Terms and Conditions</a> | <a href="#">The Privacy Policy</a></small>
              <small class="social">Follow us on: <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/facebook-icon.png" alt="Facebook"></a></small>
         </div>
