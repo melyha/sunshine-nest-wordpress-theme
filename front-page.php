@@ -41,8 +41,8 @@
 <section class="section about-section">
     <div class="about-content">
         <div class="about-image">
-          <?php if (get_theme_mod('special_section_image')) : ?>
-                <img src="<?php echo esc_url(get_theme_mod('special_section_image')); ?>" alt="What Makes Us Special" />
+          <?php if (get_theme_mod('about_section_image')) : ?>
+                <img src="<?php echo esc_url(get_theme_mod('about_section_image')); ?>" alt="What Makes Us Special" />
             <?php else : ?>
                 <img src="https://picsum.photos/seed/daycare-about/600/600" alt="Children playing together" />
             <?php endif; ?>
@@ -57,11 +57,15 @@
 
 
  <!-- Program Section -->
-<section class="section programs-section">
+<section class="section programs-section" style="background-image: url('<?php echo esc_url(get_theme_mod('programs_background_image', 'https://picsum.photos/seed/programs-bg/1440/772')); ?>');">
     <h2>Programs</h2>
     <div class="cards">
         <article class="card">
-            <img src="https://picsum.photos/seed/daycare1/800/500" alt="Daycare Center" />
+            <?php if (get_theme_mod('program_1_image')) : ?>
+        <img src="<?php echo esc_url(get_theme_mod('program_1_image')); ?>" alt="Daycare Center" />
+    <?php else : ?>
+        <img src="https://picsum.photos/seed/daycare1/800/500" alt="Daycare Center" />
+    <?php endif; ?>
             <div class="card-content">
                 <h3>Daycare Center</h3>
                 <p>Full-day care for infants and toddlers in a nurturing environment.</p>
@@ -69,7 +73,11 @@
             </div>
         </article>
         <article class="card">
-            <img src="https://picsum.photos/seed/daycare2/800/500" alt="Children's Programs" />
+            <?php if (get_theme_mod('program_2_image')) : ?>
+        <img src="<?php echo esc_url(get_theme_mod('program_2_image')); ?>" alt="Children's Programs" />
+    <?php else : ?>
+        <img src="https://picsum.photos/seed/daycare2/800/500" alt="Children's Programs" />
+    <?php endif; ?>
             <div class="card-content">
                 <h3>Children's Programs</h3>
                 <p>Educational activities designed for early childhood development.</p>
@@ -77,7 +85,11 @@
             </div>
         </article>
         <article class="card">
-            <img src="https://picsum.photos/seed/daycare3/800/500" alt="Out of School Care" />
+            <?php if (get_theme_mod('program_3_image')) : ?>
+        <img src="<?php echo esc_url(get_theme_mod('program_3_image')); ?>" alt="Out of School Care" />
+    <?php else : ?>
+        <img src="https://picsum.photos/seed/daycare3/800/500" alt="Out of School Care" />
+    <?php endif; ?>
             <div class="card-content">
                 <h3>Out of School Care</h3>
                 <p>Before and after school programs for school-aged children.</p>
@@ -134,16 +146,17 @@ $recent = wp_get_recent_posts([
 </section>
 
 <!-- Gallery Section -->
-<section class="section gallery-section">
+<section class="section gallery-section" style="background-image: url('<?php echo esc_url(get_theme_mod('gallery_background_image', 'https://picsum.photos/seed/gallery-bg/1440/889')); ?>');">
     <h2>Gallery</h2>
-    <div class="gallery-grid">
-        <img src="https://picsum.photos/seed/gallery1/400/400" alt="Gallery image 1" />
-        <img src="https://picsum.photos/seed/gallery2/400/400" alt="Gallery image 2" />
-        <img src="https://picsum.photos/seed/gallery3/400/400" alt="Gallery image 3" />
-        <img src="https://picsum.photos/seed/gallery4/400/400" alt="Gallery image 4" />
-        <img src="https://picsum.photos/seed/gallery5/400/400" alt="Gallery image 5" />
-        <img src="https://picsum.photos/seed/gallery6/400/400" alt="Gallery image 6" />
-    </div>
+   <div class="gallery-grid">
+    <?php for ($i = 1; $i <= 8; $i++) : ?>
+        <?php if (get_theme_mod('gallery_image_' . $i)) : ?>
+            <img src="<?php echo esc_url(get_theme_mod('gallery_image_' . $i)); ?>" alt="Gallery image <?php echo $i; ?>" />
+        <?php else : ?>
+            <img src="https://picsum.photos/seed/gallery<?php echo $i; ?>/400/400" alt="Gallery image <?php echo $i; ?>" />
+        <?php endif; ?>
+    <?php endfor; ?>
+</div>
 </section>
 
 
