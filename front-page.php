@@ -4,7 +4,8 @@
 <main class="site-main homepage">
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" style="background-image: url('<?php echo esc_url(get_theme_mod('hero_background_image')); ?>');">
+        
         <div class="container">
             <h1>Early Learning in the Heart of your community</h1>
             <p>At Sunshine Nest Daycare, we provide a nurturing and stimulating environment...</p>
@@ -40,7 +41,11 @@
 <section class="section about-section">
     <div class="about-content">
         <div class="about-image">
-            <img src="https://picsum.photos/seed/daycare-about/600/600" alt="Children playing together" />
+          <?php if (get_theme_mod('special_section_image')) : ?>
+                <img src="<?php echo esc_url(get_theme_mod('special_section_image')); ?>" alt="What Makes Us Special" />
+            <?php else : ?>
+                <img src="https://picsum.photos/seed/daycare-about/600/600" alt="Children playing together" />
+            <?php endif; ?>
         </div>
         <div class="about-text">
             <h2>What Makes Us Special</h2>
