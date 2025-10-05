@@ -67,14 +67,89 @@ function mytheme_customize_register( $wp_customize ) {
 
 
      // Special Section Image
-   $wp_customize->add_setting('special_section_image', array(
+   $wp_customize->add_setting('about_section_image', array(
         'default'   => '',
         'transport' => 'refresh',
     ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'special_section_image', array(
-        'label'    => 'What Makes Us Special Image',
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_section_image', array(
+        'label'    => 'About Image',
         'section'  => 'mytheme_homepage_images',
     )));
 
+// Programs Section Background Image
+$wp_customize->add_setting('programs_background_image', array(
+    'default'   => '',
+    'transport' => 'refresh',
+));
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'programs_background_image', array(
+    'label'    => 'Programs Background Image',
+    'section'  => 'mytheme_homepage_images',
+)));
+
+// Program Section Images
+    $wp_customize->add_section('mytheme_program_images', array(
+        'title'    => 'Program Images',
+        'priority' => 31,
+    ));
+
+// Program 1 
+    $wp_customize->add_setting('program_1_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'program_1_image', array(
+        'label'    => 'Daycare Center Image',
+        'section'  => 'mytheme_program_images',
+    )));
+
+     // Program 2 
+    $wp_customize->add_setting('program_2_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'program_2_image', array(
+        'label'    => 'Children\'s Programs Image',
+        'section'  => 'mytheme_program_images',
+    )));
+
+    
+    // Program 3 
+    $wp_customize->add_setting('program_3_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'program_3_image', array(
+        'label'    => 'Out of School Care Image',
+        'section'  => 'mytheme_program_images',
+    )));
+
+ // Gallery Section Background Image
+    $wp_customize->add_setting('gallery_background_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_background_image', array(
+        'label'    => 'Gallery Section Background',
+        'section'  => 'mytheme_homepage_images',
+    )));
+
+
+// Gallery Images Section
+$wp_customize->add_section('mytheme_gallery_images', array(
+    'title'    => 'Gallery Images',
+    'priority' => 32,
+));
+
+// Gallery Images (8 images)
+for ($i = 1; $i <= 8; $i++) {
+    $wp_customize->add_setting('gallery_image_' . $i, array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_image_' . $i, array(
+        'label'    => 'Gallery Image ' . $i,
+        'section'  => 'mytheme_gallery_images',
+    )));
+}
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
