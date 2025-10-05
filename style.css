@@ -247,11 +247,16 @@ main.container {
     display: none;
   }
 
+  .navbar {
+    gap: auto;
+  }
+
   .nav-wrap {
     display: block;
     position: static;
     box-shadow: none;
     padding: 0;
+    margin-left: 200px;
   }
 
   .nav-wrap.open {
@@ -360,7 +365,6 @@ main.container {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
-
 
 /* Outlined Button */
 .btn-outlined {
@@ -588,7 +592,6 @@ main.container {
    GALLERY SECTION
    ========================================== */
 
-
 .gallery-section {
   padding: var(--spacing-3xl) var(--spacing-lg);
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -673,7 +676,7 @@ main.container {
 }
 
 .card-image-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -782,7 +785,6 @@ main.container {
   color: var(--color-text);
 }
 
-
 /* Fix for news card alignment */
 .news-card {
   display: flex;
@@ -837,7 +839,6 @@ main.container {
   text-align: center;
   position: relative;
 }
-
 
 .post-header h1 {
   font-size: clamp(24px, 5vw, 36px);
@@ -942,22 +943,22 @@ main.container {
   .post-header {
     padding: 40px 20px 60px;
   }
-  
+
   .single-post .container {
     padding: 0 20px;
   }
-  
+
   .post-content {
     padding: 40px 0;
     font-size: 16px;
   }
-  
+
   .post-navigation {
     flex-direction: column;
     gap: 12px;
     padding-bottom: 60px;
   }
-  
+
   .post-navigation .btn-primary {
     width: 100%;
   }

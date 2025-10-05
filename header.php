@@ -34,7 +34,9 @@
                 'fallback_cb'    => false, // remove to auto-fall back to pages
             ]); ?>
         </nav>
-        
+         <div class="header-cta">
+            <a href="#" class="btn-outlined">Sign Up</a>
+        </div>
     </div>
 </header>
 
