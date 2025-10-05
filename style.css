@@ -524,9 +524,10 @@ main.container {
    ========================================== */
 .programs-section {
   padding: var(--spacing-3xl) var(--spacing-lg);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://picsum.photos/seed/programs-bg/1440/772") center/cover
-      no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .programs-section h2 {
@@ -555,11 +556,14 @@ main.container {
 /* ==========================================
    GALLERY SECTION
    ========================================== */
+
+
 .gallery-section {
   padding: var(--spacing-3xl) var(--spacing-lg);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://picsum.photos/seed/gallery-bg/1440/889") center/cover no-repeat;
-  margin-top: var(--spacing-3xl);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery-section h2 {
@@ -760,6 +764,7 @@ main.container {
 
 .news-card .card-content p {
   display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
