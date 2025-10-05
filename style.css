@@ -320,7 +320,9 @@ main.container {
    ========================================== */
 .btn-primary,
 .btn-secondary,
-.btn-link {
+.btn-link,
+.btn-outlined,
+.btn-text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -359,6 +361,35 @@ main.container {
   box-shadow: var(--shadow-md);
 }
 
+
+/* Outlined Button */
+.btn-outlined {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.btn-outlined:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Text Button */
+.btn-text {
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  min-width: 101px;
+  height: 36px;
+}
+
+.btn-text:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  opacity: 1;
+}
 /* ==========================================
    SECTION HEADINGS
    ========================================== */
