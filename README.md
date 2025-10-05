@@ -12,11 +12,16 @@ A custom WordPress classic theme for Sunshine Nest Daycare Center, built as a le
 ## Features
 
 - Custom logo support in header  
-- WordPress Customizer integration for images   
-- Custom homepage template  
-- Program Section
-- News/blog section 
-- Gallery section  
+- Comprehensive WordPress Customizer integration for all homepage images
+- Background images with placeholders   
+- Custom homepage template with multiple sections
+- Responsive design with mobile-first approach
+- About Section with customizable feature image
+- Programs Section with customizable background and card images
+- News/blog section with latest posts integration
+- Gallery section with customizable background and grid images
+- Sticky header navigation
+- Custom navigation menus (Primary & Footer)
 
 ## Customizer Settings
 
@@ -24,6 +29,25 @@ Navigate to **Appearance → Customize** to change:
 
 - **Site Identity:** Logo, site title, tagline
 - **Homepage Images:** All homepage images
+
+ ### Homepage Images
+ Customize all major homepage section backgrounds and images:
+ - **Hero Background Image** - Main banner background
+ - **What Makes Us Special Image** - About section feature image
+ - **Programs Section Background** - Background for programs section
+ - **Gallery Section Background** - Background for gallery section
+
+### Program Images
+Individual program card images:
+- **Daycare Center Image**
+- **Children's Programs Image**
+- **Out of School Care Image**
+
+### Gallery Images
+Customizable gallery grid images:
+- **Gallery Image 1-8** - Individual gallery photos
+
+### Additional Settings
 - **Menus:** Primary and footer navigation
 - **Colors:** Background color settings
 
@@ -41,7 +65,11 @@ Key commits in this project:
 - Add theme setup with featured image and customizer support
 - Add customizer support for homepage images
 - Add image integration to header and front page templates
-- Update README 
+- Add customizer settings for programs/gallery backgrounds, program cards, and gallery images
+- Update front-page to use images from customizer with placeholders
+- Update programs and gallery sections CSS to support background images
+- Update README
+
 
 Resources
 - [WordPress Theme Handbook](https://developer.wordpress.org/themes/)
