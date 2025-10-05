@@ -1034,3 +1034,76 @@ main.container {
     width: 100%;
   }
 }
+
+/* ==========================================
+PAGE TEMPLATE
+   ========================================== */
+.single-page {
+  background: var(--color-white);
+}
+
+.page-header {
+  background: linear-gradient(135deg, #a9def9 0%, #80ed99 100%);
+  padding: 60px 26px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 26px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.page-content h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: var(--color-text);
+}
+
+.page-content h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 600;
+  margin: 32px 0 16px;
+  color: var(--color-text-light);
+}
+
+.page-content p {
+  margin: 0 0 24px;
+}
+
+.page-content ul, .page-content ol {
+  margin: 24px 0;
+  padding-left: 30px;
+}
+
+.page-content li {
+  margin-bottom: 12px;
+}
+
+.page-content img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 20px;
+  }
+  
+  .page-content {
+    padding: 40px 20px;
+    font-size: 16px;
+  }
+}
