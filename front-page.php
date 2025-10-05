@@ -9,7 +9,7 @@
         <div class="container">
             <h1>Early Learning in the Heart of your community</h1>
             <p>At Sunshine Nest Daycare, we provide a nurturing and stimulating environment...</p>
-            <a href="#" class="btn-primary">Schedule a Visit</a>
+            <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>" class="btn-primary">Schedule a Visit</a>
         </div>
     </section>
 
@@ -50,7 +50,7 @@
         <div class="about-text">
             <h2>What Makes Us Special</h2>
             <p>As a locally-owned childcare center, we understand the unique needs of families in our community. Our approach combines structured learning with creative play, helping children develop socially, emotionally, and academically. We believe every child deserves personalized attention in a setting that feels like a second home.</p>
-            <a href="#" class="btn-primary">Learn More</a>
+            <a href="<?php echo get_permalink(get_page_by_path('about-us')); ?>" class="btn-primary">Learn More</a>
         </div>
     </div>
 </section>
@@ -69,7 +69,7 @@
             <div class="card-content">
                 <h3>Daycare Center</h3>
                 <p>Full-day care for infants and toddlers in a nurturing environment.</p>
-                <a href="#" class="btn-link">Learn More</a>
+                <a href="<?php echo get_permalink(get_page_by_path('programs')); ?>" class="btn-link">Learn More</a>
             </div>
         </article>
         <article class="card">
@@ -81,7 +81,7 @@
             <div class="card-content">
                 <h3>Children's Programs</h3>
                 <p>Educational activities designed for early childhood development.</p>
-                <a href="#" class="btn-link">Learn More</a>
+                <a href="<?php echo get_permalink(get_page_by_path('programs')); ?>" class="btn-link">Learn More</a>
             </div>
         </article>
         <article class="card">
@@ -93,7 +93,7 @@
             <div class="card-content">
                 <h3>Out of School Care</h3>
                 <p>Before and after school programs for school-aged children.</p>
-                <a href="#" class="btn-link">Learn More</a>
+                <a href="<?php echo get_permalink(get_page_by_path('programs')); ?>" class="btn-link">Learn More</a>
             </div>
         </article>
     </div>
