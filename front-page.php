@@ -97,16 +97,30 @@ $recent = wp_get_recent_posts([
 <?php if ( ! empty( $recent ) ) : ?>
   <div class="cards">
     <?php foreach ( $recent as $post ) : ?>
-      <article class="card">
-        <?php echo get_the_post_thumbnail( $post['ID'], 'thumbnail' ); ?>
-        <div class="card-content">
-          <h3><a href="<?php echo get_permalink( $post['ID'] ); ?>"><?php echo get_the_title( $post['ID'] ); ?></a></h3>
-          <?php echo get_the_excerpt( $post['ID'] ); ?>
-          <time datetime="<?php echo get_the_date( 'c', $post['ID'] ); ?>">
-            <?php echo get_the_date( '', $post['ID'] ); ?>
-          </time>
-        </div>
-      </article>
+
+
+              <article class="card news-card">
+                    <a href="<?php echo get_permalink($post['ID']); ?>" class="card-link">
+                        <div class="card-image-wrapper">
+                            <?php if (has_post_thumbnail($post['ID'])) : ?>
+                                <?php echo get_the_post_thumbnail($post['ID'], 'large'); ?>
+                            <?php endif; ?>
+                            
+                            
+                        <div class="news-date">
+                            <span class="date-day"><?php echo get_the_date('j', $post['ID']); ?></span>
+                            <span class="date-month"><?php echo get_the_date('M', $post['ID']); ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo get_the_title($post['ID']); ?></a></h3>
+                        <p><?php echo wp_trim_words(get_the_excerpt($post['ID']), 20); ?></p>
+                        
+                    </div>
+
+                </article>
+
     <?php endforeach; ?>
   </div>
 <?php else : ?>

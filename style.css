@@ -607,3 +607,161 @@ main.container {
   font-size: var(--font-size-sm);
   line-height: 1.6;
 }
+
+/* ==========================================
+   NEWS CARDS WITH CUSTOM WAVE
+   ========================================== */
+.news-section {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: linear-gradient(180deg, #e3f2fd 0%, #f5f9fc 100%);
+}
+
+.news-card {
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.card-link {
+  display: block;
+  color: inherit;
+}
+
+/* Card Image Container with Wave Bottom */
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  height: 240px;
+}
+
+.card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: url('data:image/svg+xml,<svg preserveAspectRatio="none" width="394" height="60" viewBox="0 0 394 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M225.635 5.7C234.198 1.4 257.186 -4.6 280.635 5.7C304.083 16 328.011 10.2 337.044 6C346.915 2.1 372.017 -3.3 393.453 6V48C393.453 54.5 372.778 60 347.273 60H46.1794C20.6751 60 -0.000244141 54.5 -0.000244141 48V5.7C8.83388 1.5 32.2015 -4.3 54.9988 5.7C77.7962 15.7 102.104 9.8 111.408 5.7C121.255 1.8 146.323 -3.7 167.817 5.7C189.312 15.1 215.319 9.6 225.635 5.7Z" fill="white"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  pointer-events: none;
+  z-index: 2;
+  transition: all var(--transition-base);
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.news-card:hover .card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Date Badge */
+.news-date {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ff6b9d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.date-day {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Different badge colors */
+.news-card:nth-child(1) .news-date {
+  background: #ff6b9d;
+}
+
+.news-card:nth-child(2) .news-date {
+  background: #ffd93d;
+}
+
+.news-card:nth-child(3) .news-date {
+  background: #ff8c42;
+}
+
+/* Hover: Wave changes to badge color */
+.news-card:nth-child(1):hover .card-image-wrapper::after {
+  background-image: url('data:image/svg+xml,<svg preserveAspectRatio="none" width="394" height="60" viewBox="0 0 394 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M225.635 5.7C234.198 1.4 257.186 -4.6 280.635 5.7C304.083 16 328.011 10.2 337.044 6C346.915 2.1 372.017 -3.3 393.453 6V48C393.453 54.5 372.778 60 347.273 60H46.1794C20.6751 60 -0.000244141 54.5 -0.000244141 48V5.7C8.83388 1.5 32.2015 -4.3 54.9988 5.7C77.7962 15.7 102.104 9.8 111.408 5.7C121.255 1.8 146.323 -3.7 167.817 5.7C189.312 15.1 215.319 9.6 225.635 5.7Z" fill="%23ff6b9d"/></svg>');
+}
+
+.news-card:nth-child(2):hover .card-image-wrapper::after {
+  background-image: url('data:image/svg+xml,<svg preserveAspectRatio="none" width="394" height="60" viewBox="0 0 394 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M225.635 5.7C234.198 1.4 257.186 -4.6 280.635 5.7C304.083 16 328.011 10.2 337.044 6C346.915 2.1 372.017 -3.3 393.453 6V48C393.453 54.5 372.778 60 347.273 60H46.1794C20.6751 60 -0.000244141 54.5 -0.000244141 48V5.7C8.83388 1.5 32.2015 -4.3 54.9988 5.7C77.7962 15.7 102.104 9.8 111.408 5.7C121.255 1.8 146.323 -3.7 167.817 5.7C189.312 15.1 215.319 9.6 225.635 5.7Z" fill="%23ffd93d"/></svg>');
+}
+
+.news-card:nth-child(3):hover .card-image-wrapper::after {
+  background-image: url('data:image/svg+xml,<svg preserveAspectRatio="none" width="394" height="60" viewBox="0 0 394 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M225.635 5.7C234.198 1.4 257.186 -4.6 280.635 5.7C304.083 16 328.011 10.2 337.044 6C346.915 2.1 372.017 -3.3 393.453 6V48C393.453 54.5 372.778 60 347.273 60H46.1794C20.6751 60 -0.000244141 54.5 -0.000244141 48V5.7C8.83388 1.5 32.2015 -4.3 54.9988 5.7C77.7962 15.7 102.104 9.8 111.408 5.7C121.255 1.8 146.323 -3.7 167.817 5.7C189.312 15.1 215.319 9.6 225.635 5.7Z" fill="%23ff8c42"/></svg>');
+}
+
+/* Card Content - sits below wave */
+.card-content {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin-top: -20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.news-card:hover .card-content {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-content h3 {
+  color: var(--color-text-light);
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-bottom: var(--spacing-sm);
+  transition: color var(--transition-base);
+}
+
+.news-card:hover h3 {
+  color: var(--color-text);
+}
+
+.card-content p {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.likes {
+  color: var(--color-accent);
+}
